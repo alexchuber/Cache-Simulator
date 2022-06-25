@@ -25,12 +25,9 @@ int main()
 	cout << endl;
 
 	auto stats = cachesim.GetSummaryStats();
-	if (setcount != 1 && blockcount != 1)
-		type = to_string(blockcount) + "-way Set Associative";
-	else if (setcount == 1)
-		type = "Fully Associative";
-	else
-		type = "Direct Mapped";
+	if (setcount != 1 && blockcount != 1) type = to_string(blockcount) + "-way Set Associative";
+	else if (setcount == 1) type = "Fully Associative";
+	else type = "Direct Mapped";
 
 	cout << "====Cache Properties====" << endl;
 	cout << "Cache size: " << (setcount * blockcount * blocksize) << " KB" << endl;
